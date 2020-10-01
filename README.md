@@ -1,3 +1,2 @@
 # testingpullrequest
-testing pull request
-on develop
+testing pull pull resuest from develop
