@@ -3,6 +3,7 @@ pipeline {
     stages { 
         stage('Example') {
             steps {
+                when { changeRequest target: 'master' }
                 echo 'Hello World'
             }
         }
