@@ -2,9 +2,9 @@ pipeline {
     agent any
     stages { 
         stage('Example') {
-            steps {
-                when { changeRequest target: 'master' }
-                echo 'Hello World'
+            when { changeRequest target: 'master' }
+            steps {          
+               echo 'Hello World'
             }
         }
     }
