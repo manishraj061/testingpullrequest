@@ -2,8 +2,7 @@ pipeline {
     agent any
     stages { 
         stage('Example') {
-            when { changeRequest target: 'master' }
-            steps {          
+           steps {          
                echo 'Hello World'
             }
         }
