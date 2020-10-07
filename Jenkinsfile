@@ -28,18 +28,10 @@ pipeline {
     }
 	post {
       success {
-	       echo 'Merging code to Master branch'
-                merge([$class: 'GitSCM',
-                    extensions: [$class: 'PreBuildMerge',options:[mergeTarget: 'master',mergeRemote: 'origin',]],
-                    submoduleCfg: [],
-                    userRemoteConfigs: [[
-                        credentialsId: 'manishgithub',
-                        url: 'https://github.com/manishraj061/testingpullrequest.git']]])		   
-        }                    
-                   
-
-      success {
-	       echo 'develop branch has been merged'
+	       echo 'Successfully completed'
+        }
+      always {
+	       echo 'Always run'
         }	
     }
 }
